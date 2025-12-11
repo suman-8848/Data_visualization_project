@@ -1,0 +1,45 @@
+SYSTEM ARCHITECTURE DIAGRAM
+===========================
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    FRONTEND (Browser/D3.js)                     │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
+│  │  Attention   │  │  Knowledge   │  │    Token     │         │
+│  │   Heatmap    │◄─┤    Graph     │◄─┤   Sequence   │         │
+│  └──────┬───────┘  └──────┬───────┘  └──────────────┘         │
+│         │                  │                                    │
+│         └──────────────────┼────────────────────────────────────┤
+│                   ┌────────▼────────┐                          │
+│                   │ Sync Controller │                          │
+│                   └────────┬────────┘                          │
+└────────────────────────────┼───────────────────────────────────┘
+                             │ HTTP/JSON
+┌────────────────────────────▼───────────────────────────────────┐
+│                    BACKEND (FastAPI/Python)                    │
+├────────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐        │
+│  │    Model     │→ │  Knowledge   │→ │    Graph     │        │
+│  │   Handler    │  │  Extractor   │  │   Builder    │        │
+│  └──────────────┘  └──────────────┘  └──────────────┘        │
+└────────────────────────────────────────────────────────────────┘
+
+
+DATA FLOW DIAGRAM
+=================
+
+User Question
+     ↓
+[LLM Inference] → Answer + Attention Weights
+     ↓
+[Entity Extraction] → Entities (PERSON, GPE, ORG, etc.)
+     ↓
+[Relationship Extraction] → Relations (subject-verb-object)
+     ↓
+[Graph Construction] → Nodes + Edges + Layout
+     ↓
+[JSON Response] → {answer, tokens, attention, graph}
+     ↓
+[D3.js Rendering] → Interactive Visualizations
+     ↓
+[User Interaction] → Synchronized Highlighting

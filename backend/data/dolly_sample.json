@@ -1,0 +1,32 @@
+[
+  {
+    "instruction": "What is the capital of France?",
+    "context": "",
+    "response": "The capital of France is Paris.",
+    "category": "closed_qa"
+  },
+  {
+    "instruction": "Explain how photosynthesis works in plants.",
+    "context": "",
+    "response": "Photosynthesis is the process by which plants convert light energy into chemical energy. Plants use chlorophyll in their leaves to absorb sunlight, which is then used to convert carbon dioxide from the air and water from the soil into glucose (sugar) and oxygen. The glucose provides energy for the plant's growth and development, while oxygen is released as a byproduct.",
+    "category": "open_qa"
+  },
+  {
+    "instruction": "Who wrote the novel '1984'?",
+    "context": "",
+    "response": "The novel '1984' was written by George Orwell, published in 1949.",
+    "category": "closed_qa"
+  },
+  {
+    "instruction": "What are the main causes of climate change?",
+    "context": "",
+    "response": "The main causes of climate change include: 1) Burning of fossil fuels (coal, oil, and natural gas) which releases carbon dioxide and other greenhouse gases, 2) Deforestation which reduces the Earth's capacity to absorb CO2, 3) Industrial processes and agriculture which emit methane and other greenhouse gases, and 4) Transportation emissions from vehicles and aircraft.",
+    "category": "open_qa"
+  },
+  {
+    "instruction": "Describe the process of DNA replication.",
+    "context": "",
+    "response": "DNA replication is the process by which a cell copies its DNA before cell division. The process begins when the double helix unwinds and the two strands separate. Each strand serves as a template for creating a new complementary strand. DNA polymerase enzymes add nucleotides to build the new strands, following base-pairing rules (A with T, G with C). The result is two identical DNA molecules, each containing one original strand and one newly synthesized strand.",
+    "category": "summarization"
+  }
+]
